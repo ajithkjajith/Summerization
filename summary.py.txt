@@ -1,0 +1,26 @@
+def Summary(text,n)
+    from nltk.tokenize import sent_tokenize,word_tokenize
+    from nltk.corpus import stopwords
+    from string import punctuation
+    sents=sent_tokenize(text)
+    word_sent = word_tokenize(text.lower())
+    stopw= set(stopwords.words('english')+list(punctuation))
+    word_sent = [word for word in word_sent if word not in stopw]
+    from nltk.probability import FreqDist
+    freq = FreqDist(word_sent)
+
+    from collections import defaultdict
+    ranking = defaultdict(int)
+    for i,sent in enumerate(sents)
+        for w in word_tokenize(sent.lower())
+            if w in freq
+                ranking[i] += freq[w]
+    from heapq import nlargest
+    sents_idx = nlargest(n,ranking,key=ranking.get)
+
+    return {talkingabout nlargest(5,freq,key=freq.get), summary [sents[j] for j in sorted(sents_idx)]}
+
+
+data = Subhash (Jayam Ravi) is an upright and sincere Sub-Inspector of Police in Chennai. He resides with his father (Ponvannan), mother (Sriranjani) and elder brother (Subbu Panchu) and is set to marry his fiancee Anitha (Raashi Khanna). He is new to his job and is assisted by Ramadass (Ramdoss) and SI Chandran (Azhagam Perumal). His character is such that he cannot stand the suffering of the public and looks for ways to better their lives. The film opens with a protest led by college students to shut down the nearby wine shop as many students are neglecting studies and spoil their lives. Subhash intervenes before things get ugly and instigate the mob to destroy the shop. This does not go well with his superior (Mime Gopi) and Subhash is made to do traffic duty. In another case, he thrashes the Ministers son and his friends because he didnt stop at the barrier and abused the police. Chandran and Subhash are called on to investigate the supposed suicide of a girl. On closer investigation, Subhash deduces that it wasnt a suicide and that she was murdered. While collecting evidence to support this, he comes across Abhijith whose cell number was active near the place. On confronting Abhijith and his friends Christy, Bhuvan and Deepak, they reveal that they murdered the girl by showing the video. Subhash gets enraged and thrashes them and then locks them in the jail. When his superior Saarangan (Sampath Raj) asks for the proof, he finds out that the phone automatically deleted all the evidence. The four are released due to lack of evidence and Subhash is suspended. When he goes home, he finds his parents and his brothers family dead. Only his niece Anusha is left alive. Saarangan reports the murder of Subhashs family members as an accident due to the fire from the puja. Subhash then resigns and tells Saarangan that he will make sure the four guys die. First, he kidnaps Bhuvan by keeping him in a car which operates in a way that if the car handle is opened, the car is filled with silane gas and Bhuvan succumbs to his burn injuries. Then he kidnaps Deepak and Christy and puts them at disclosed locations. The police, in order to find the missing kids, arrest Subash but he doesnt bite. It is revealed that Subhash kept Christy in a van near the airport. Subhash wanted Christy to meet Anitha but his father told him not too not too since police were nearby. Despite that, Subhash had an auto-loaded gun in his bag, and Christy is brutally shot by the police. Then Deepak is found to be located in a tank full of harmful chemicals. Subhash and his tech friend make situation into a game where the public shoot at Deepak. His father comes there and mistakenly opens the chemicals instantly killing Deepak. While watching these situations, Subhash threatens Saarangans daughter but is proved to be false. His daughter also scolds him and causes Saarangan to realize his mistake and decides to support Subhash. Abhijiths dad decided to release Subhash so he could take care of him himself. Subhash escapes and kidnaps Abhijith and has him hanging on a rope. Subhash gave the dad a choice between saving his son, or his reputation, as Subhash plans to have the rape video public on his news channel. In the end, the dad decided to save his reputation and killed his son. The film ends with Subhash killing being promoted to IPS and saving another rape victim.
+data1 = Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002, and released officially in January 2006.
+Summary(data,2)
