@@ -1,0 +1,16 @@
+import bs4 as bs
+import urllib.request
+
+source = urllib.request.urlopen('https://en.wikipedia.org/wiki/Adanga_Maru').read()
+soup = bs.BeautifulSoup(source,'lxml')
+for paragraph in soup.find_all('p'):
+    print(paragraph.string)
+    print(str(paragraph.text))
+
+print("###############################################")
+
+for url in soup.find_all('a'):
+    print(url.get('href'))
+print("###############################################")
+
+print(soup.get_text())
